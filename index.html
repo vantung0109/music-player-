@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/mode.css">
+</head>
+<body>
+    <div class="player">
+
+        <!--  Dashboard -->
+        <div class="dashboard">
+            <!-- Header -->
+            <header>
+                <h4>Now Playing</h4>
+            </header>
+
+            <!-- CD -->
+            <div class="cd">
+                <div class="cd-thumbnail" style="background-color: brown;"></div>
+            </div>
+
+            <div class="music-title">
+                <h3>Current Music Name</h3>
+                <h5>Singer Name</h5>
+            </div>
+
+            <div class="volume_and_like">
+                <div class="btn btn-volume">
+                    <i class="fa-solid fa-volume-high icon-unmuted"></i>
+                    <!-- <i class="fa-solid fa-volume-low"></i> -->
+                    <!-- <i class="fa-solid fa-volume-off icon-muted"></i> -->
+                    <input id="progress-volume" class="progress-volume" type="range" value="100" step="1" min="0" max="100">
+                </div>
+                <div class="btn btn-like">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+            </div>
+
+            <!-- Progress -->
+            <div class="progress-task">
+                <span class="progress-time time-current">0:00</span>
+                <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+                <span class="progress-time time-end">0:00</span>
+            </div>
+
+            <!-- Control -->
+            <div class="control">
+                <div class="btn btn-repeat">
+                    <i class="fa-solid fa-repeat"></i>
+                </div>
+                <div class="btn btn-prev">
+                    <i class="fa-solid fa-backward-step"></i>
+                </div>
+                <div class="btn btn-toggle-play">
+                    <i class="fa-solid fa-pause icon-pause"></i>
+                    <i class="fa-solid fa-play icon-play"></i>
+                </div>
+                <div class="btn btn-next">
+                    <i class="fa-solid fa-forward-step"></i>
+                </div>
+                <div class="btn btn-shuffle">
+                    <i class="fa-solid fa-shuffle"></i>
+                </div>
+            </div>
+
+            <!-- Audio -->
+            <audio id="audio" src=""></audio>
+
+        </div>
+
+        <!-- Playlist -->
+        <div class="playlist">
+            <header>
+                <a href="#" class="list-title">
+                    <h4>My songs</h4>
+                    <div class="line"></div>
+                </a>
+                <a href="#" class="list-title">
+                    <h4>Lyrics</h4>
+                </a>
+                
+            </header>
+
+            <div class="playlist-scroll"></div>
+        </div>
+
+    </div>
+
+    <div class="theme-container shadow-light">
+        <img id="theme-icon" src="https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg" alt="ERR">
+    </div>
+    
+    <!-- Background -->
+    <div class="background">
+        <video id="video_background" class="light-mode" preload="auto" autoplay="true" loop="loop" muted volume="0">
+            <source src="./assets/gif/lake_light(1080p).mp4" type="video/mp4"/>
+        </video>
+        <video id="video_background" class="dark-mode" preload="auto" autoplay="true" loop="loop" muted volume="0">
+            <source src="./assets/gif/lake_dark(1080p).mp4" type="video/mp4"/>
+        </video>
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/mode.js"></script>
+</body>
+</html>
