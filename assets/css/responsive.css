@@ -1,0 +1,11 @@
+/* PC: 1920 x 1080 */
+@media only screen and (min-width: 1600px) {
+    .player {
+        transform: translateY(55%);
+    }
+
+    #video_background {
+        margin-top: 0;
+    }
+}
+

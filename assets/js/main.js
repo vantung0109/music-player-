@@ -1,25 +1,26 @@
-const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
+const $ = document.querySelector.bind(document)
+const $$ = document.querySelectorAll.bind(document)
 
-const player = $(".player");
-const playList = $(".playlist-scroll");
-const cd = $(".cd");
-const heading = $(".music-title h3");
+const player = $(".player")
+const playList = $(".playlist-scroll")
+const cd = $(".cd")
+const heading = $(".music-title h3")
 const singerName = $(".music-title h5")
-const cdThumb = $(".cd-thumbnail");
+const cdThumb = $(".cd-thumbnail")
 const audio = $("#audio");
 const currentTime = $('.time-current')
 const endTime = $('.time-end')
-const playBtn = $(".btn-toggle-play");
+const playBtn = $(".btn-toggle-play")
 const progress = $("#progress");
 const prevBtn = $(".btn-prev");
 const nextBtn = $(".btn-next");
-const randomBtn = $(".btn-shuffle");
-const repeatBtn = $(".btn-repeat");
-
+const randomBtn = $(".btn-shuffle")
+const repeatBtn = $(".btn-repeat")
 const btnLike = $('.btn-like')
-const volumeChange = $(".progress-volume");
+const volumeChange = $(".progress-volume")
+const volumeBtn = $('.btn-volume')
 const iconUnmuted = $('.icon-unmuted')
+const iconVolumeLow = $('.icon-volume-low')
 const iconMuted = $('.icon-muted')
 
 const app = {
@@ -274,6 +275,11 @@ const app = {
             audio.volume = currentVolume
         }
 
+        // Xử lí khi ấn vào nút âm lượng
+        volumeBtn.onclick = function() {
+            
+        }
+
         // Xử lí khi bấm like
         btnLike.addEventListener('click', function() {
             if (_this.isLike) {
@@ -300,23 +306,24 @@ const app = {
         playList.onclick = function (e) {
         const songNode = e.target.closest(".song:not(.active)");
 
-        if (songNode || e.target.closest(".option")) {
-            // Xử lý khi click vào song
-            // Handle when clicking on the song
-            if (songNode) {
-                _this.currentIndex = Number(songNode.dataset.index);
-                _this.loadCurrentSong();
-                _this.render();
-                audio.play();
-            }
-
-            // Xử lý khi click vào song option
-            // Handle when clicking on the song option
-            if (e.target.closest(".option")) {
-                    }
+            if (songNode || e.target.closest(".option")) {
+                // Xử lý khi click vào song
+                // Handle when clicking on the song
+                if (songNode) {
+                    _this.currentIndex = Number(songNode.dataset.index);
+                    _this.loadCurrentSong();
+                    _this.render();
+                    audio.play();
                 }
-            };
-        },
+
+                // Xử lý khi click vào song option
+                // Handle when clicking on the song option
+                if (e.target.closest(".option")) {
+
+                }
+            }
+        };
+    },
 
     scrollToActiveSong: function() {
             setTimeout(() => {

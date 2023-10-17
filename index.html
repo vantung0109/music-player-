@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./assets/fontawesome-free-6.4.2-web/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/mode.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 <body>
     <div class="player">
@@ -34,8 +35,8 @@
             <div class="volume_and_like">
                 <div class="btn btn-volume">
                     <i class="fa-solid fa-volume-high icon-unmuted"></i>
-                    <!-- <i class="fa-solid fa-volume-low"></i> -->
-                    <!-- <i class="fa-solid fa-volume-off icon-muted"></i> -->
+                    <i class="fa-solid fa-volume-low icon-volume-low"></i>
+                    <i class="fa-solid fa-volume-off icon-muted"></i>
                     <input id="progress-volume" class="progress-volume" type="range" value="100" step="1" min="0" max="100">
                 </div>
                 <div class="btn btn-like">
@@ -102,7 +103,7 @@
         <video id="video_background" class="light-mode" preload="auto" autoplay="true" loop="loop" muted volume="0">
             <source src="./assets/gif/lake_light(1080p).mp4" type="video/mp4"/>
         </video>
-        <video id="video_background" class="dark-mode" preload="auto" autoplay="true" loop="loop" muted volume="0">
+        <video id="video_background" class="dark-mode" style="display: none;" preload="auto" autoplay="true" loop="loop" muted volume="0">
             <source src="./assets/gif/lake_dark(1080p).mp4" type="video/mp4"/>
         </video>
     </div>

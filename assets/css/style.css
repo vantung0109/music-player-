@@ -173,6 +173,11 @@ html {
     cursor: pointer;
 }
 
+.btn-volume .icon-volume-low,
+.btn-volume .icon-muted {
+    display: none;
+}
+
 .btn-volume:before {
     content: "";
     width: 20px;
